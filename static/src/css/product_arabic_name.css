@@ -1,0 +1,16 @@
+/* Arabic Name Styling for POS */
+.arabic-name {
+    color: #666 !important;
+    font-size: 0.9em !important;
+    font-weight: normal !important;
+    display: block !important;
+    margin-top: 2px !important;
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* Ensure product name container can accommodate Arabic text */
+.product-name {
+    min-height: auto !important;
+    line-height: 1.2 !important;
+}
