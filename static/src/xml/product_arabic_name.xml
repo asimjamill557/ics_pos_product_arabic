@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="ics_pos_product_arabic.templates">
+    <!-- Extend ProductCard template -->
+    <t t-name="ics_pos_product_arabic.ProductCardWithArabic" t-inherit="point_of_sale.ProductCard" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('product-name')]" position="inside">
+            <!-- Debug: Always show this to verify template is working -->
+            <div style="color: red; font-size: 0.8em;">DEBUG: Template loaded!</div>
+            
+            <t t-if="arabicName">
+                <br/>
+                <span class="arabic-name" style="color: #666; font-size: 0.9em;">
+                    <t t-esc="arabicName"/>
+                </span>
+            </t>
+            <t t-else="">
+                <div style="color: orange; font-size: 0.8em;">DEBUG: No Arabic name found</div>
+            </t>
+        </xpath>
+    </t>
+
+    <!-- Extend ProductsWidget template -->
+    <t t-name="ics_pos_product_arabic.products_widget.template" t-inherit="point_of_sale.ProductsWidget" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('product-name')]" position="inside">
+            <t t-if="product.arabic_name">
+                <br/>
+                <span class="arabic-name" style="color: #666; font-size: 0.9em;">
+                    <t t-esc="product.arabic_name"/>
+                </span>
+            </t>
+        </xpath>
+    </t>
+</templates>
