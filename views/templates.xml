@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- QWeb templates are loaded via the qweb section in manifest -->
+</odoo>
